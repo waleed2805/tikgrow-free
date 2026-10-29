@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Free TikTok organic growth tools: hashtags, captions, video ideas and practical creator tips.">
+<title>TikGrow Free — Organic TikTok Growth Tools</title>
+<style>
+:root{--bg:#0b0d12;--panel:#141821;--panel2:#1b202b;--text:#f5f7fb;--muted:#aab2c0;--pink:#ff3d70;--cyan:#35e6df;--line:#2b3240}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top right,#20203b 0,transparent 38%),var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+a{color:inherit}.wrap{width:min(1100px,92%);margin:auto}.nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0;gap:14px}.brand{font-weight:900;font-size:1.25rem;letter-spacing:-.04em}.brand span{color:var(--cyan)}.pill{border:1px solid var(--line);border-radius:999px;padding:7px 12px;color:var(--muted);font-size:.85rem}
+.hero{padding:58px 0 38px;max-width:760px}.eyebrow{color:var(--cyan);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem}.hero h1{font-size:clamp(2.4rem,7vw,4.8rem);line-height:1.02;letter-spacing:-.06em;margin:12px 0 18px}.gradient{background:linear-gradient(90deg,var(--cyan),#fff,var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{color:var(--muted);font-size:1.08rem;max-width:660px}.note{border:1px solid #3b4b52;background:#112026;border-radius:14px;padding:14px 16px;color:#d8f8f5;margin:24px 0}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:24px 0 60px}.card{background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:20px;padding:22px;min-width:0}.card h2{font-size:1.25rem;margin:0 0 5px}.sub{color:var(--muted);font-size:.92rem;margin:0 0 18px}label{display:block;font-weight:700;font-size:.9rem;margin:12px 0 6px}input,select,textarea{width:100%;background:#0d1118;color:var(--text);border:1px solid #394150;border-radius:11px;padding:12px;font:inherit}textarea{min-height:90px;resize:vertical}button{border:0;border-radius:11px;padding:11px 15px;background:linear-gradient(100deg,var(--cyan),#a2fff7);color:#071315;font-weight:850;font-size:.95rem;cursor:pointer;margin-top:12px}button.secondary{background:#252c38;color:var(--text);border:1px solid #414958}.result{margin-top:14px;background:#0d1118;border:1px solid var(--line);border-radius:12px;padding:14px;white-space:pre-wrap;overflow-wrap:anywhere;min-height:48px;color:#e9edf4}.muted{color:var(--muted)}.tips{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.tip{background:#10141c;border:1px solid var(--line);padding:16px;border-radius:14px}.tip strong{display:block;margin-bottom:6px}.footer{border-top:1px solid var(--line);padding:25px 0 36px;color:var(--muted);font-size:.88rem}.section-title{font-size:1.8rem;letter-spacing:-.04em;margin:0 0 14px}
+@media(max-width:720px){.grid{grid-template-columns:1fr}.hero{padding-top:38px}.tips{grid-template-columns:1fr}.nav{align-items:flex-start}.pill{font-size:.75rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav"><div class="brand">TikGrow<span>Free</span></div><div class="pill">100% free tools · No login</div></nav>
+  <header class="hero">
+    <div class="eyebrow">Create smarter. Grow organically.</div>
+    <h1>Grow your TikTok with <span class="gradient">better content.</span></h1>
+    <p>Free, simple tools to brainstorm video ideas, write captions and find relevant hashtags. Made for creators who want to build a real audience.</p>
+    <div class="note"><strong>Honest growth promise:</strong> No bots, fake followers or guaranteed view counts. Results depend on your content and audience. Never share your TikTok password with a growth tool.</div>
+  </header>
+
+  <main class="grid">
+    <section class="card">
+      <h2>✦ Hashtag Generator</h2><p class="sub">Get relevant hashtag ideas for your topic.</p>
+      <label for="topic">Video topic</label><input id="topic" placeholder="e.g. street food review">
+      <label for="niche">Content category</label>
+      <select id="niche"><option>Food & Drink</option><option>Cars</option><option>Beauty & Fashion</option><option>Gaming</option><option>Education</option><option>Comedy</option><option>Travel</option><option>Fitness</option><option>Other</option></select>
+      <button onclick="makeHashtags()">Generate hashtags</button><div class="result" id="hashtags" aria-live="polite">Your hashtag ideas will appear here.</div>
+      <button class="secondary" onclick="copyResult('hashtags')">Copy hashtags</button>
+    </section>
+
+    <section class="card">
+      <h2>✦ Caption Helper</h2><p class="sub">Create a caption with a clear hook and call to action.</p>
+      <label for="captionTopic">What is your video about?</label><input id="captionTopic" placeholder="e.g. trying a giant burger">
+      <label for="tone">Caption style</label><select id="tone"><option value="curious">Curiosity</option><option value="fun">Funny</option><option value="review">Honest review</option><option value="story">Mini story</option></select>
+      <button onclick="makeCaption()">Create caption</button><div class="result" id="caption" aria-live="polite">Your caption will appear here.</div>
+      <button class="secondary" onclick="copyResult('caption')">Copy caption</button>
+    </section>
+
+    <section class="card">
+      <h2>✦ Video Idea Generator</h2><p class="sub">Brainstorm a video you can actually make.</p>
+      <label for="ideaNiche">Your niche</label><select id="ideaNiche"><option value="food">Food reviews</option><option value="cars">Cars</option><option value="gaming">Gaming</option><option value="comedy">Comedy</option><option value="travel">Travel</option><option value="education">Educational content</option><option value="beauty">Beauty & fashion</option></select>
+      <label for="resources">What can you film with?</label><select id="resources"><option value="phone">Phone camera</option><option value="ai">AI visuals (label realistic AI when required)</option><option value="voice">Voice-over and original clips</option></select>
+      <button onclick="makeIdea()">Give me an idea</button><div class="result" id="idea" aria-live="polite">Your video idea will appear here.</div>
+      <button class="secondary" onclick="copyResult('idea')">Copy idea</button>
+    </section>
+
+    <section class="card">
+      <h2>✦ 30-Second Video Planner</h2><p class="sub">Use a simple structure to keep viewers interested.</p>
+      <label for="planTopic">Video topic</label><input id="planTopic" placeholder="e.g. testing Lahore's spicy noodles">
+      <button onclick="makePlan()">Build my plan</button><div class="result" id="plan" aria-live="polite">Your 30-second plan will appear here.</div>
+      <button class="secondary" onclick="copyResult('plan')">Copy plan</button>
+    </section>
+  </main>
+
+  <section style="margin-bottom:54px">
+    <h2 class="section-title">Organic growth checklist</h2>
+    <div class="tips">
+      <div class="tip"><strong>01 · Hook quickly</strong><span class="muted">Show the most interesting moment in the first 1–2 seconds. Avoid long intros.</span></div>
+      <div class="tip"><strong>02 · Be original</strong><span class="muted">Use your own footage, commentary or meaningful editing. Get permission for other people's work.</span></div>
+      <div class="tip"><strong>03 · Learn from analytics</strong><span class="muted">Compare watch time, completion, shares and comments. Repeat formats that genuinely work.</span></div>
+    </div>
+  </section>
+  <footer class="footer">TikGrow Free is an independent creator tool and is not affiliated with TikTok. It does not deliver or guarantee views, likes, followers or monetization. Check TikTok's current rules and eligibility requirements in your region.</footer>
+</div>
+<script>
+const $ = id => document.getElementById(id);
+function clean(s){return s.trim().replace(/\s+/g,' ')}
+function makeHashtags(){
+ const topic=clean($('topic').value), niche=$('niche').value;
+ if(!topic){$('hashtags').textContent='Pehle apna video topic likho.';return}
+ const base=['#TikTokCreator','#ForYou','#FYP'];
+ const map={
+ 'Food & Drink':['#FoodTok','#FoodReview','#FoodLovers','#WhatIEat'],
+ 'Cars':['#CarTok','#CarReview','#CarLovers','#Auto'],
+ 'Beauty & Fashion':['#BeautyTok','#StyleTips','#FashionTok','#GetReadyWithMe'],
+ 'Gaming':['#GamingTok','#Gamer','#Gameplay','#GamingCommunity'],
+ 'Education':['#LearnOnTikTok','#DidYouKnow','#StudyTips','#LearnSomething'],
+ 'Comedy':['#ComedyTok','#FunnyVideos','#Relatable','#SketchComedy'],
+ 'Travel':['#TravelTok','#TravelTips','#ExploreMore','#HiddenGems'],
+ 'Fitness':['#FitnessTok','#WorkoutTips','#HealthyHabits','#FitnessJourney'],
+ 'Other':['#CreatorTips','#NewVideo','#Discover','#ContentCreator']
+ };
+ const words=topic.toLowerCase().replace(/[^a-z0-9\s]/g,' ').split(/\s+/).filter(w=>w.length>2).slice(0,3);
+ const topicTags=words.map(w=>'#'+w.charAt(0).toUpperCase()+w.slice(1));
+ $('hashtags').textContent=[...new Set([...topicTags,...map[niche],...base])].join(' ');
+}
+function makeCaption(){
+ const t=clean($('captionTopic').value);if(!t){$('caption').textContent='Pehle video ka topic likho.';return}
+ const tone=$('tone').value;
+ const lines={
+ curious:`I wasn't expecting this from ${t} 👀 Would you try it? Tell me below.`,
+ fun:`Okay, ${t} did NOT go how I expected 😂 Rate it out of 10!`,
+ review:`Honest take on ${t}: here's what stood out to me. What should I review next?`,
+ story:`Come with me as I try ${t} ✨ The best part might surprise you. What do you think?`
+ };
+ $('caption').textContent=lines[tone]+'\n\nUse only hashtags relevant to your actual video, and disclose sponsorships when applicable.';
+}
+const ideas={
+ food:['Rate three local snacks from cheapest to most expensive','Try a popular food and give an honest first reaction','Ask a local what dish a visitor must try'],
+ cars:['Explain one useful feature on a car you can film','Compare two car interiors using your own footage','Share a quick car-care myth and what reliable sources say'],
+ gaming:['Show one beginner tip with your own gameplay','Try a challenge and show the result','Explain a mistake you made and how you fixed it'],
+ comedy:['Make a short skit about a relatable everyday problem','Show expectation vs reality with your own acting','Turn a harmless misunderstanding into a punchline'],
+ travel:['Show three details people often miss at a local place','Build a short budget-friendly local itinerary','Share one practical travel tip from your own experience'],
+ education:['Explain one confusing term in 20 seconds','Answer a common question with an example','Correct a popular misconception using credible sources'],
+ beauty:['Show a simple before-and-after styling process','Compare two ways to use an item you own','Share a routine and explain what works for you']
+};
+function makeIdea(){
+ const niche=$('ideaNiche').value, resource=$('resources').value, arr=ideas[niche];
+ const pick=arr[Math.floor(Math.random()*arr.length)];
+ const extra=resource==='ai'?'Use original AI visuals and label realistic AI-generated content when TikTok requires it.':resource==='voice'?'Record your own voice-over and use footage you own or have permission to use.':'Film clear vertical clips in good light with your phone.';
+ $('idea').textContent='Idea: '+pick+'\n\nExecution: '+extra+'\n\nStructure: 1–2 sec hook → useful or entertaining middle → ask one natural question.';
+}
+function makePlan(){
+ const t=clean($('planTopic').value);if(!t){$('plan').textContent='Pehle topic likho.';return}
+ $('plan').textContent=`0–2 sec — Hook: show the most surprising part of “${t}”.\n3–8 sec — Set up the question or challenge.\n9–22 sec — Show the process, key details or evidence.\n23–27 sec — Give your honest result or takeaway.\n28–30 sec — Ask a relevant question to invite real comments.\n\nTip: remove pauses, add readable captions, and don't promise something the video doesn't deliver.`;
+}
+async function copyResult(id){
+ const text=$(id).textContent;
+ try{await navigator.clipboard.writeText(text);alert('Copied!')}catch(e){alert('Copy nahi hua. Text select karke manually copy kar lo.')}
+}
+</script>
+</body>
+</html>
